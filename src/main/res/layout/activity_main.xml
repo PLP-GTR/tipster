@@ -8,17 +8,17 @@
     >
 
     <!-- App bar -->
-<!--    <com.google.android.material.appbar.MaterialToolbar
+       <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         material:theme="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
         material:popupTheme="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
         material:titleTextColor="@color/white"
-        material:navigationIcon="@drawable/ic_menu"
+        material:navigationIcon="@drawable/baseline_menu_24"
         material:contentInsetStart="0dp"
         material:contentInsetEnd="0dp"
-        />-->
+        />
 
     <!-- Main content area -->
     <LinearLayout
