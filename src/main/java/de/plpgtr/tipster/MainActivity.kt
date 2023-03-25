@@ -1,13 +1,16 @@
 package de.plpgtr.tipster
 
-import android.R
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-
+import com.google.android.material.textview.MaterialTextView
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val textView = findViewById<MaterialTextView>(R.id.hello_world_text)
+        textView.text = "Hello World!"
     }
 }
