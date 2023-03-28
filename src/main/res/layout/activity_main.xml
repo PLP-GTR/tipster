@@ -1,34 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:material="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
+    xmlns:material="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    >
+    android:orientation="vertical">
 
     <!-- App bar -->
-       <com.google.android.material.appbar.MaterialToolbar
+    <com.google.android.material.appbar.MaterialToolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        material:theme="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
-        material:popupTheme="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
-        material:titleTextColor="@color/white"
-        material:navigationIcon="@drawable/baseline_menu_24"
-        material:contentInsetStart="0dp"
         material:contentInsetEnd="0dp"
-        />
+        material:contentInsetStart="0dp"
+        material:navigationIcon="@drawable/baseline_menu_24"
+        material:popupTheme="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
+        material:theme="@style/ThemeOverlay.MaterialComponents.Toolbar.Primary"
+        material:titleTextColor="@color/white" />
 
     <!-- Main content area -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="16dp"
-        >
+        android:padding="16dp">
 
         <!-- Text input field -->
         <com.google.android.material.textfield.TextInputLayout
@@ -37,41 +33,50 @@
             android:layout_height="wrap_content"
             android:hint="Enter text here"
             material:boxBackgroundMode="outline"
-            material:hintEnabled="true"
-            >
+            material:hintEnabled="true">
+
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/input_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:maxLines="1"
-                />
+                android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Button -->
 
         <com.google.android.material.slider.Slider
             android:id="@+id/percentage_slider"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:valueFrom="0"
-            android:valueTo="4"
+            android:contentDescription="@string/percentage_slider"
             android:stepSize="1"
-            app:labelBehavior="gone"
-            app:tickCount="5"
-            app:tickColor="@color/purple_500"
-            app:thumbColor="@color/purple_700"
-            app:thumbRadius="12dp"
-            app:trackColor="@color/purple_200"
-            app:trackHeight="8dp"
-            app:values="@array/percentages" />
+            android:valueFrom="0"
+            android:valueTo="30"
+            app:tickCount="6"
+            app:tickValues="@array/slider_ticks"
+            app:tickVisible="true" />
 
-        <!-- Button -->
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Submit"
             material:cornerRadius="8dp"
-            material:rippleColor="@color/design_default_color_primary_dark"
-            />
+            material:rippleColor="@color/design_default_color_primary_dark" />
+
+        <SeekBar
+            android:id="@+id/seekbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/purple_200"
+            android:max="100"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:progress="0"
+            android:progressTint="@color/purple_500"
+            android:thumbTint="@color/purple_700" />
+
 
     </LinearLayout>
 

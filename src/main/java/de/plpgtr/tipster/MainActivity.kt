@@ -12,7 +12,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         val percentageSlider = findViewById<Slider>(R.id.percentage_slider)
-        val percentage = percentageSlider.values[0]
+//        val percentage = percentageSlider.values[0]
     }
 
 }
